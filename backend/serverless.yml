@@ -24,3 +24,10 @@ functions:
             headers:
               Content-Type: "'application/json'"
               Cache-Control: "'max-age=120'"
+  getImage:
+    handler: src/handler.getImage
+    events:
+      - http:
+          path: /get-image
+          method: get
+          cors: true
