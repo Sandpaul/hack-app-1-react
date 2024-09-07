@@ -31,3 +31,14 @@ functions:
           path: /get-image
           method: get
           cors: true
+  readTextFromImage:
+    handler: src/handler.readTextFromImage
+    events:
+      - http:
+          path: /read-text-from-image
+          method: get
+          cors: true
+          response:
+            headers:
+              Content-Type: "'application/json'"
+              Cache-Control: "'max-age=120'"
