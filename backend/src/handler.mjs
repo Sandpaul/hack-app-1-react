@@ -59,6 +59,8 @@ export const readTextFromImage = async (event) => {
       body: JSON.stringify({text}),
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       }
     }
   } catch (error) {
